@@ -39,7 +39,7 @@ target_link_libraries (MainProduct LINK_PUBLIC hello)
 
 #include_directories (${MAIN_SOURCE_DIR}/contrib/gtest) 
 add_library (GTEST ${MAIN_SOURCE_DIR}/contrib/gtest/gtest-all.cc)
-target_include_directories (GTEST PUBLIC ${MAIN_SOURCE_DIR}/contrib/gtest)
+target_include_directories (GTEST PUBLIC ${MAIN_SOURCE_DIR}/contrib)
 
 include_directories (${MAIN_SOURCE_DIR}/test/src) 
 # ========== Test: SampleTest=================================================
