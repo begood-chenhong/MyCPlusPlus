@@ -7,9 +7,17 @@ It uses googlemock to simulate c++ mock class.
 Its directory structure obeys the basic project naming convention. Hopefully, bigger application can be built based on it.  
 
 Usage:  
-After git clone or download, below commands could be used to build the projects and generate executable files:    
+After git clone or download, below commands could be used to build the projects and generate executable files under the source file directory:    
 $ cmake .  
 $ make  
+  
+Note:
+1) On CYGWIN64 platform, in order to make googlemock work, suggest to use "cmake . -Dgtest_disable_pthreads=ON".
+Otherwise, below error can happen:
+"[ FATAL ] /cygdrive/c/code/temp/TrialSecondApproach_OnlyDefault/googletest-src/googletest/include/gtest/internal/gtest-port.h:1636:: pthread_mutex_lock(&mutex_)failed with error 22
+Aborted (core dumped)"
+2) If want to generate google test sample executable files, suggest to use "cmake . -Dgtest_build_samples=ON".
+3) If want want to build for debug (including source information, i.e. -g), use "cmake . -DCMAKE_BUILD_TYPE=Debug"    
   
 A lot of thanks to:  
 1) Google test authors and user group.   
@@ -26,14 +34,3 @@ http://stackoverflow.com/questions/3951808/using-googletest-in-eclipse-how/58007
       https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md  
       https://github.com/google/googletest/tree/master/googlemock/docs  
       https://github.com/davidstutz/googlemock-example  
-  
-  
-Note:
-1) On CYGWIN64 platform, in order to make googlemock work, suggest to use "cmake . -Dgtest_disable_pthreads=ON".
-Otherwise, below error can happen:
-"[ FATAL ] /cygdrive/c/code/temp/TrialSecondApproach_OnlyDefault/googletest-src/googletest/include/gtest/internal/gtest-port.h:1636:: pthread_mutex_lock(&mutex_)failed with error 22
-Aborted (core dumped)"
-2) If want to generate google test sample executable files, suggest to use "cmake . -Dgtest_build_samples=ON".
-3) If want want to build for debug (including source information, i.e. -g), use "cmake . -DCMAKE_BUILD_TYPE=Debug"  
-
-
