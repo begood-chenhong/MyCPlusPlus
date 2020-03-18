@@ -34,6 +34,6 @@ Otherwise, below error can happen:
 "[ FATAL ] /cygdrive/c/code/temp/TrialSecondApproach_OnlyDefault/googletest-src/googletest/include/gtest/internal/gtest-port.h:1636:: pthread_mutex_lock(&mutex_)failed with error 22
 Aborted (core dumped)"
 2) If want to generate google test sample executable files, suggest to use "cmake . -Dgtest_build_samples=ON".
-3) If want want to build for debug (including source information, i.e. -g), use cmake . -DCMAKE_BUILD_TYPE=Debug  
+3) If want want to build for debug (including source information, i.e. -g), use "cmake . -DCMAKE_BUILD_TYPE=Debug"  
 
 
