@@ -29,9 +29,11 @@ http://stackoverflow.com/questions/3951808/using-googletest-in-eclipse-how/58007
   
   
 Note:
-1) On CYGWIN64 platform, in order to make googletest work, suggest to use "cmake . -Dgtest_disable_pthreads=ON".
+1) On CYGWIN64 platform, in order to make googlemock work, suggest to use "cmake . -Dgtest_disable_pthreads=ON".
 Otherwise, below error can happen:
 "[ FATAL ] /cygdrive/c/code/temp/TrialSecondApproach_OnlyDefault/googletest-src/googletest/include/gtest/internal/gtest-port.h:1636:: pthread_mutex_lock(&mutex_)failed with error 22
 Aborted (core dumped)"
 2) If want to generate google test sample executable files, suggest to use "cmake . -Dgtest_build_samples=ON".
+3) If want want to build for debug (including source information, i.e. -g), use cmake . -DCMAKE_BUILD_TYPE=Debug  
+
 
